@@ -1,17 +1,13 @@
 package com.tecsup.petclinic.services;
-
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
-
 import java.util.List;
-
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
 import com.tecsup.petclinic.entities.Pet;
 import com.tecsup.petclinic.exception.PetNotFoundException;
 
@@ -23,9 +19,7 @@ public class PetServiceTest {
 	@Autowired
 	private PetService petService;
 
-	/**
-	 * 
-	 */
+	
 	@Test
 	public void testFindPetById() {
 
@@ -46,9 +40,10 @@ public class PetServiceTest {
 
 	}
 
-	/**
-	 * 
-	 */
+	
+	
+	
+	
 	@Test
 	public void testFindPetByName() {
 
@@ -60,9 +55,9 @@ public class PetServiceTest {
 		assertThat(pets.size(), is(SIZE_EXPECTED));
 	}
 
-	/**
-	 * 
-	 */
+	
+	
+	
 	@Test
 	public void testFindPetByTypeId() {
 
@@ -74,9 +69,8 @@ public class PetServiceTest {
 		assertThat(pets.size(), is(SIZE_EXPECTED));
 	}
 
-	/**
-	 * 
-	 */
+	
+	
 	@Test
 	public void testFindPetByOwnerId() {
 
@@ -89,12 +83,7 @@ public class PetServiceTest {
 		
 	}
 
-	/**
-	 *  To get ID generate , you need 
-	 *  setup in id primary key in your
-	 *  entity this annotation :
-	 *  	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	 */
+	
 	@Test
 	public void testCreatePet() {
 
@@ -117,9 +106,6 @@ public class PetServiceTest {
 	}
 
 	
-	/**
-	 * 
-	 */
 	@Test
 	public void testUpdatePet() {
 
@@ -158,9 +144,7 @@ public class PetServiceTest {
 		assertThat(upgradePet.getOwnerId(), is(UP_TYPE_ID));
 	}
 
-	/**
-	 * 
-	 */
+	
 	@Test
 	public void testDeletePet() {
 

@@ -12,7 +12,7 @@ import javax.persistence.Id;
  * 
  * @author jgomezm
  *
- */
+*/
 @Entity(name = "pets")
 public class Pet {
 
@@ -20,6 +20,7 @@ public class Pet {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private String name;
+	
 	@Column(name = "type_id")
 	private int typeId;
 	@Column(name = "owner_id")
